@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting…</title>
+    <script>
+    (function () {
+        // Map of supported lang prefixes to directory names
+        var supported = { es: 'es', en: 'en', fr: 'fr', de: 'de' };
+        var fallback = 'es';
+        var landing = 'faq.html'; // default landing page
+
+        // 1. Check cookie (shared with WoodStore FacturaScripts plugin)
+        var lang = null;
+        var cookieMatch = document.cookie.match(/(?:^|;\s*)woodstore_lang=([^;]+)/);
+        if (cookieMatch) {
+            // Cookie stores locale codes like "es_ES", "en_EN" — extract prefix
+            var prefix = cookieMatch[1].substring(0, 2).toLowerCase();
+            if (supported[prefix]) {
+                lang = prefix;
+            }
+        }
+
+        // 2. Check browser language
+        if (!lang && navigator.language) {
+            var browserPrefix = navigator.language.substring(0, 2).toLowerCase();
+            if (supported[browserPrefix]) {
+                lang = browserPrefix;
+            }
+        }
+
+        // 3. Fallback
+        if (!lang) {
+            lang = fallback;
+        }
+
+        // Set/update the cookie so WoodStore also picks it up
+        // Map short code back to locale code for WoodStore compatibility
+        var localeMap = { es: 'es_ES', en: 'en_EN', fr: 'fr_FR', de: 'de_DE' };
+        var localeCode = localeMap[lang] || 'es_ES';
+        document.cookie = 'woodstore_lang=' + localeCode
+            + ';path=/;max-age=31536000;SameSite=Lax'
+            + (location.protocol === 'https:' ? ';Secure' : '');
+
+        // Redirect
+        window.location.replace('/' + lang + '/' + landing);
+    })();
+    </script>
+    <noscript>
+        <meta http-equiv="refresh" content="0;url=/es/faq.html">
+    </noscript>
+</head>
+<body>
+    <p>Redirecting… <a href="/es/faq.html">Click here</a> if not redirected.</p>
+</body>
+</html>

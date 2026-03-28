@@ -1,0 +1,10 @@
+# WoodPages — Apache configuration for cPanel hosting
+Options -Indexes
+
+# Force HTTPS (uncomment if your hosting supports it)
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Custom 404 page (optional — create /404.html if desired)
+# ErrorDocument 404 /404.html

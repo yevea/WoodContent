@@ -114,7 +114,7 @@ ol.index ol > li::before {content: counters(item, ".") " ";counter-increment: it
 ol.index > li {padding-top: .125rem;}
 ol.index > li > ol {padding-left: 0.5rem;}
 ol.index > li > ol > li > ol {padding-left: 0.5rem;}
-ol.index > h3 {float: left;}
+ol.index h2, ol.index h3, ol.index h4, ol.index h5, ol.index h6 {display: inline;}
 header ol.index li a {font-weight:400;}
 sup.index {padding:.25em .375em .25em .5em;border-radius:8px;font-size:.5em;}
 

@@ -15,9 +15,21 @@
     // ── Helpers ────────────────────────────────────────────────
     var supportedLangs = ['es', 'en', 'fr', 'de'];
     var pathParts = window.location.pathname.split('/');
-    var rawLang = pathParts[1] || 'es';
-    var currentLang = supportedLangs.indexOf(rawLang) !== -1 ? rawLang : 'es';
-    var currentPage = pathParts[2] || 'faq.html';
+
+    // Find the language directory in the URL path. This works whether the
+    // site is at the root (e.g. /es/faq.html) or under a subdirectory
+    // (e.g. /WoodContent/es/faq.html).
+    var langIndex = -1;
+    for (var i = 0; i < pathParts.length; i++) {
+        if (supportedLangs.indexOf(pathParts[i]) !== -1) {
+            langIndex = i;
+            break;
+        }
+    }
+    var currentLang = langIndex !== -1 ? pathParts[langIndex] : 'es';
+    var currentPage = (langIndex !== -1 && pathParts[langIndex + 1])
+        ? pathParts[langIndex + 1]
+        : 'faq.html';
 
     // Pages whose filename differs between languages.
     // Any page NOT listed here keeps its filename across all languages.
@@ -68,7 +80,7 @@
         for (var i = 0; i < links.length; i++) {
             var lang = links[i].getAttribute('data-lang');
             if (supportedLangs.indexOf(lang) !== -1) {
-                links[i].setAttribute('href', '/' + lang + '/' + pageForLang(lang));
+                links[i].setAttribute('href', '../' + lang + '/' + pageForLang(lang));
             }
         }
 

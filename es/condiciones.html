@@ -23,40 +23,8 @@
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════════════════════
-     HEADER — identical on every page, only lang label changes
-     ═══════════════════════════════════════════════════════════ -->
-<header id="woodstore-header">
-    <div class="container d-flex align-items-center justify-content-between">
-        <a href="/"><img style="width:100px;height:25px;"
-            src="https://yevea.com/001-vectores/logo-yevea-white.svg"
-            alt="madera olivo - logo"><sup>&reg;</sup></a>
-        <div class="d-flex align-items-center gap-2">
-            <!-- Language switcher dropdown -->
-            <div class="dropdown">
-                <button class="btn btn-sm dropdown-toggle lang-switcher-btn" type="button"
-                        id="lang-switcher" data-bs-toggle="dropdown" aria-expanded="false">
-                    español
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="lang-switcher">
-                    <li><a class="dropdown-item active" href="/es/about.html">español</a></li>
-                    <li><a class="dropdown-item" href="/en/about.html">English</a></li>
-                    <li><a class="dropdown-item" href="/fr/about.html">français</a></li>
-                    <li><a class="dropdown-item" href="/de/about.html">Deutsch</a></li>
-                </ul>
-            </div>
-            <button type="button" id="hamburger-toggle" class="hamburger-toggle"
-                    aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
-        </div>
-    </div>
-    <div id="hamburger-menu" class="hamburger-dropdown">
-        <ul>
-            <li><a href="/es/about.html">Sobre Nosotros</a></li>
-            <li><a href="/es/faq.html">Preguntas Frecuentes</a></li>
-            <li><a href="/es/contact.html">Contacto</a></li>
-        </ul>
-    </div>
-</header>
+<!-- Header loaded dynamically from header.html -->
+<div id="header-placeholder"></div>
 
 <!-- ═══════════════════════════════════════════════════════════
      PAGE CONTENT — owner edits this section by hand
@@ -70,26 +38,26 @@
 <div style="width: 25%;float:left;text-align:center;">
 <p>Envío a toda<br />
 <span style="font-size:2em">UE</span><br />
-<sup><a href="#envio">&rarr; 1</a></sup></p>
+<sup><a href="#envio">→ 1</a></sup></p>
 </div>
 
 
 <div style="width: 25%;float:left;border-left: 1px solid #ddd;text-align:center;">
 <p>Sostenible<br />
 <span style="font-size:2em">100%</span><br />
-<sup><a href="#sostenibilidad">&rarr; 2</a></sup></p>
+<sup><a href="#sostenibilidad">→ 2</a></sup></p>
 </div>
     
 <div style="width: 25%;float:left;border-left: 1px solid #ddd;text-align:center;">
 <p>Entrega<br />
 <span style="font-size:2em">1 - 6</span><br />
-semanas<sup><a href="#entrega">&rarr; 3</a></sup></p>
+semanas<sup><a href="#entrega">→ 3</a></sup></p>
 </div>
 
 <div style="width: 25%;float:left;border-left: 1px solid #ddd;text-align:center;">
-<p>Garant&iacute;a<br />
+<p>Garantía<br />
 <span style="font-size:2em">3</span><br />
-a&ntilde;os<sup><a href="#garantia">&rarr; 4</a></sup></p>
+años<sup><a href="#garantia">→ 4</a></sup></p>
 </div>
 
 <div style="clear:both"></div>
@@ -97,7 +65,7 @@ a&ntilde;os<sup><a href="#garantia">&rarr; 4</a></sup></p>
 <div style="color:#000;border:1px solid #ddd;border-radius: 9px; background-color:#fff7f7;padding: 1.5rem;margin:1rem 0;">
 <strong id="aviso-antes-comprar" style="margin:0px;">Antes de comprar considera lo siguiente:</strong>
 <p><code>yevea.com/#aviso-antes-comprar</code></p>
-<p>&iexcl;Si consideras aceite de oliva suave el mejor, si est&aacute;s buscando madera de un color y veteado preconcebido, si piensas que madera con nudos y grietas es defectuosa, entonces <b>no&nbsp;compres</b> nuestro aceite de oliva, ni productos de madera de&nbsp;olivo!</p></div>
+<p>¡Si consideras aceite de oliva suave el mejor, si estás buscando madera de un color y veteado preconcebido, si piensas que madera con nudos y grietas es defectuosa, entonces <b>no compres</b> nuestro aceite de oliva, ni productos de madera de olivo!</p></div>
 
 <ol class="index">
 	<li>
@@ -105,14 +73,14 @@ a&ntilde;os<sup><a href="#garantia">&rarr; 4</a></sup></p>
 
 	<p><code>yevea.com/#sotenibilidad</code></p>
 
-	<p>Nuestro principio m&aacute;s alto es la satisfacci&oacute;n de nuestros clientes sin sacrificar por ello las necesidades de las generaciones futuras. Este principio rige todos los dem&aacute;s principios y reglas.</p>
+	<p>Nuestro principio más alto es la satisfacción de nuestros clientes sin sacrificar por ello las necesidades de las generaciones futuras. Este principio rige todos los demás principios y reglas.</p>
 	</li>
 	<li>
-	<strong id="cliente">Atenci&oacute;n al Cliente</strong>
+	<strong id="cliente">Atención al Cliente</strong>
 
 	<p><code>yevea.com/#cliente</code></p>
 
-	<p>Cont&aacute;ctanos en cualquier momento a trav&eacute;s del correo electr&oacute;nico. Te responderemos en breve.</p>
+	<p>Contáctanos en cualquier momento a través del correo electrónico. Te responderemos en breve.</p>
 	</li>
 <li>
     <strong id="tipos-productos">Tipos de productos</strong>
@@ -156,7 +124,7 @@ a&ntilde;os<sup><a href="#garantia">&rarr; 4</a></sup></p>
 </li>
 
 	<li>
-	<strong id="envio">Gastos de env&iacute;o</strong>
+	<strong id="envio">Gastos de envío</strong>
 
 	<p><code>yevea.com/#envio</code></p>
 <ol>
@@ -170,25 +138,25 @@ a&ntilde;os<sup><a href="#garantia">&rarr; 4</a></sup></p>
 </li>
 <li>
 <strong>Exportación</strong>
-<p>De momento entregamos solo a los países de Europa continental, p.e. Francia, Alemania, Polonia etc. A lugares no cubiertos por nuestra empresa de transporte vendemos mercanc&iacute;a bajo condiciones Ex Works / en f&aacute;brica = entrega directa a la salida de la f&aacute;brica. Comprador debe cargar la mercanc&iacute;a en veh&iacute;culos proporcionados por &eacute;l mismo o despacharla de aduana para la exportaci&oacute;n. El comprador correr&aacute; con todos los gastos (licencias, autorizaciones, formalidades, impuestos) y riesgos de tomar la mercanc&iacute;a del domicilio del comprador hacia el destino deseado, e incluso los de p&eacute;rdida o da&ntilde;o que pueda sufrir la mercanc&iacute;a a partir del aviso del vendedor. Comprador est&aacute; obligado a reembolsar&aacute; los gastos que haya realizado por el vendedor al prestar su ayuda en la obtenci&oacute;n de documentos, permisos, etc. y efectuar el pago de la mercanc&iacute;a seg&uacute;n lo estipulado.</p>
+<p>De momento entregamos solo a los países de Europa continental, p.e. Francia, Alemania, Polonia etc. A lugares no cubiertos por nuestra empresa de transporte vendemos mercancía bajo condiciones Ex Works / en fábrica = entrega directa a la salida de la fábrica. Comprador debe cargar la mercancía en vehículos proporcionados por él mismo o despacharla de aduana para la exportación. El comprador correrá con todos los gastos (licencias, autorizaciones, formalidades, impuestos) y riesgos de tomar la mercancía del domicilio del comprador hacia el destino deseado, e incluso los de pérdida o daño que pueda sufrir la mercancía a partir del aviso del vendedor. Comprador está obligado a reembolsará los gastos que haya realizado por el vendedor al prestar su ayuda en la obtención de documentos, permisos, etc. y efectuar el pago de la mercancía según lo estipulado.</p>
 </li>
 </ol>
 
 </li>
 
 <li>
-	<strong id="cancelacion">Cancelaci&oacute;n del pedido</strong>
+	<strong id="cancelacion">Cancelación del pedido</strong>
 	<p><code>yevea.com/#cancelacion</code></p>
 	<ol>
 		<li>
-		<strong id="cancelacion-estandar">Cancelaci&oacute;n de productos estándar</strong>
+		<strong id="cancelacion-estandar">Cancelación de productos estándar</strong>
 
-		<p>El cliente puede cancelar el pedido de los productos est&aacute;ndar en cualquier momento antes del env&iacute;o. En caso de cancelaci&oacute;n despu&eacute;s del env&iacute;o, los gastos de transporte reales los asumir&aacute; el cliente.</p>
+		<p>El cliente puede cancelar el pedido de los productos estándar en cualquier momento antes del envío. En caso de cancelación después del envío, los gastos de transporte reales los asumirá el cliente.</p>
 		</li>
 
 		<li>
-		<strong id="cancelacion-medida">Cancelaci&oacute;n de productos y modelos a medida</strong>
-		<p>No se pueden cancelar o cambiar los pedidos de artículos fabricados a medida, como p.e. tablas de corte grabadas, encimera o tablero a medida, modelos de mueble según esquema del cliente etc. una vez comenzada su fabricaci&oacute;n.</p>
+		<strong id="cancelacion-medida">Cancelación de productos y modelos a medida</strong>
+		<p>No se pueden cancelar o cambiar los pedidos de artículos fabricados a medida, como p.e. tablas de corte grabadas, encimera o tablero a medida, modelos de mueble según esquema del cliente etc. una vez comenzada su fabricación.</p>
 		</li>
 	</ol>
 	</li>
@@ -198,15 +166,15 @@ a&ntilde;os<sup><a href="#garantia">&rarr; 4</a></sup></p>
 
 	<p><code>yevea.com/#entrega</code></p>
 
-	<p>La mayor&iacute;a de los productos no los tenemos almacenados y los fabricamos bajo pedido. La fecha de entrega de los pedidos para la producci&oacute;n est&aacute; oscilando entre 4 y 6 semanas seg&uacute;n el grado actual de la ocupaci&oacute;n de la f&aacute;brica. Aunque ocasionalmente proporcionamos al cliente la fecha de entrega, esta fecha es orientativa y no tiene garant&iacute;a. Cada pedido requiere para su producci&oacute;n un tiempo que no es posible determinar con anterioridad.</p>
+	<p>La mayoría de los productos no los tenemos almacenados y los fabricamos bajo pedido. La fecha de entrega de los pedidos para la producción está oscilando entre 4 y 6 semanas según el grado actual de la ocupación de la fábrica. Aunque ocasionalmente proporcionamos al cliente la fecha de entrega, esta fecha es orientativa y no tiene garantía. Cada pedido requiere para su producción un tiempo que no es posible determinar con anterioridad.</p>
 	</li>
 	<li>
 
-	<strong id="entrega">Entrega de la mercanc&iacute;a</strong>
+	<strong id="entrega">Entrega de la mercancía</strong>
 
 	<p><code>yevea.com/#entrega</code></p>
 
-	<p>La mercanc&iacute;a se entrega a pie de calle. El transportista contratado no subir&aacute; ni instalar&aacute; la mercanc&iacute;a en el local o vivienda. No nos hacemos responsables de la instalación y de los problemas ocasionados por ella.</p>
+	<p>La mercancía se entrega a pie de calle. El transportista contratado no subirá ni instalará la mercancía en el local o vivienda. No nos hacemos responsables de la instalación y de los problemas ocasionados por ella.</p>
 	</li>
 <li>
 	<strong id="reclamaciones">Reclamaciones</strong>
@@ -216,70 +184,70 @@ a&ntilde;os<sup><a href="#garantia">&rarr; 4</a></sup></p>
 	<ol>
 
 		<li>
-		<strong id="entrega-antes">Da&ntilde;os mec&aacute;nicos durante del transporte</strong>
+		<strong id="entrega-antes">Daños mecánicos durante del transporte</strong>
 
 		<p><code>yevea.com/#entrega-antes</code></p>
 
-		<p>En el transcurso de transporte pueden ocurrir da&ntilde;os mec&aacute;nicos como p.e. golpes en los cantos. Si los da&ntilde;os mec&aacute;nicos son considerables que no se pueden reparar y han sido causados durante del transporte el cliente tiene derecho a un cambio o arreglo. En tal caso el cliente debe contactarnos dentro de 24 horas posteriores a la entrega y buscaremos una soluci&oacute;n juntos. El seguro de transporte solo acepta reclamaciones en las 24 horas siguientes a la entrega. Los da&ntilde;os producidos a la mercanc&iacute;a durante del transporte solo ser&aacute;n responsabilidad de Yevea durante 24 horas despu&eacute;s de que el cliente reciba la mercanc&iacute;a. Por tanto, ser&aacute; responsabilidad del cliente desembalar el producto y asegurarse que no ha sufrido ning&uacute;n golpe o rotura durante el transporte. La garant&iacute;a de cualquier defecto procedente de la fabricaci&oacute;n no est&aacute; afectada por esta estipulaci&oacute;n.</p>
+		<p>En el transcurso de transporte pueden ocurrir daños mecánicos como p.e. golpes en los cantos. Si los daños mecánicos son considerables que no se pueden reparar y han sido causados durante del transporte el cliente tiene derecho a un cambio o arreglo. En tal caso el cliente debe contactarnos dentro de 24 horas posteriores a la entrega y buscaremos una solución juntos. El seguro de transporte solo acepta reclamaciones en las 24 horas siguientes a la entrega. Los daños producidos a la mercancía durante del transporte solo serán responsabilidad de Yevea durante 24 horas después de que el cliente reciba la mercancía. Por tanto, será responsabilidad del cliente desembalar el producto y asegurarse que no ha sufrido ningún golpe o rotura durante el transporte. La garantía de cualquier defecto procedente de la fabricación no está afectada por esta estipulación.</p>
 		</li>
 		<li>
-		<strong id="entrega-despues">Da&ntilde;os mec&aacute;nicos tras la entrega</strong>
+		<strong id="entrega-despues">Daños mecánicos tras la entrega</strong>
 
 		<p><code>yevea.com/#entrega-despues</code></p>
 
-		<p>En el transcurso de la instalaci&oacute;n o con el paso del tiempo, pueden ocurrir da&ntilde;os mec&aacute;nicos como las ralladuras o peque&ntilde;os golpes. Como nuestros tableros y encimeras no son perfectos por defecto eso no suele presentar un problema. Desperfección es normal en nuestro producto, por lo cual entregamos todas las tablas, tableros y encimeras con una cara buena (agujeros vacíos o rellenados con resina) y una cara mala (llena de masilla, tapada con pintura negra). No tenemos la ambici&oacute;n de fabricar un tablero que parezca &ldquo;nuevo&rdquo; as&iacute; que un golpe le puede potenciar el efecto de p&aacute;tina deseado. En caso que el cliente desea &ldquo;camuflar&rdquo; los da&ntilde;os mec&aacute;nicos, puede lijar y/o rellenar con la cera reparadora de madera y acto seguido volver a aceitar el lugar da&ntilde;ado del tablero.</p>
+		<p>En el transcurso de la instalación o con el paso del tiempo, pueden ocurrir daños mecánicos como las ralladuras o pequeños golpes. Como nuestros tableros y encimeras no son perfectos por defecto eso no suele presentar un problema. Desperfección es normal en nuestro producto, por lo cual entregamos todas las tablas, tableros y encimeras con una cara buena (agujeros vacíos o rellenados con resina) y una cara mala (llena de masilla, tapada con pintura negra). No tenemos la ambición de fabricar un tablero que parezca “nuevo” así que un golpe le puede potenciar el efecto de pátina deseado. En caso que el cliente desea “camuflar” los daños mecánicos, puede lijar y/o rellenar con la cera reparadora de madera y acto seguido volver a aceitar el lugar dañado del tablero.</p>
 		</li>
 		<li>
 		<strong id="defectos-plano">Defectos de plano</strong>
 
 		<p><code>yevea.com/#defectos-plano</code></p>
 
-		<p>En caso de producci&oacute;n de modelos a medida, el cliente debe suministrarnos el esquema o plano acotado en todas sus medidas para la fabricaci&oacute;n del modelo. Si existen fallos en las medidas o dise&ntilde;o aportadas por el cliente, no se admitir&aacute;n reclamaciones.</p>
+		<p>En caso de producción de modelos a medida, el cliente debe suministrarnos el esquema o plano acotado en todas sus medidas para la fabricación del modelo. Si existen fallos en las medidas o diseño aportadas por el cliente, no se admitirán reclamaciones.</p>
 		</li>
 		<li>
-		<strong id="defectos-tolerancias">Tolerancia de fabricaci&oacute;n</strong>
+		<strong id="defectos-tolerancias">Tolerancia de fabricación</strong>
 
 		<p><code>yevea.com/#defectos-tolerancias</code></p>
 
-		<p>Nuestros productos de madera de olivo est&aacute;n hechos a mano. No podemos evitar la variabilidad de las medidas. La tolerancia dimensional en largo y ancho es &plusmn; 5 mm. En cuanto al grosor de los tableros la tolernacia es + 0 mm / - 10 mm, dependiendo del alambeo de la madera.</p>
+		<p>Nuestros productos de madera de olivo están hechos a mano. No podemos evitar la variabilidad de las medidas. La tolerancia dimensional en largo y ancho es ± 5 mm. En cuanto al grosor de los tableros la tolernacia es + 0 mm / - 10 mm, dependiendo del alambeo de la madera.</p>
 		</li>
 		<li>
-		<strong id="defectos-uniones">Tama&ntilde;o de maderas unidas</strong>
+		<strong id="defectos-uniones">Tamaño de maderas unidas</strong>
 
 		<p><code>yevea.com/#defectos-uniones</code></p>
 
-		<p>Olivo es un &aacute;rbol peque&ntilde;o, del cual sacamos tablones del m&aacute;ximo tama&ntilde;o posible. No se admiten reclamaciones del tama&ntilde;o de las maderas cuales se unieron para formar el producto final (p.e. tama&ntilde;o de las tablas en el tablero, n&uacute;mero de tacos en el cuenco, etc.).</p>
+		<p>Olivo es un árbol pequeño, del cual sacamos tablones del máximo tamaño posible. No se admiten reclamaciones del tamaño de las maderas cuales se unieron para formar el producto final (p.e. tamaño de las tablas en el tablero, número de tacos en el cuenco, etc.).</p>
 		</li>
 		
 		<li><strong id="defectos-deformaciones">Grietas, nudos y deformaciones</strong>
 		<p><code>yevea.com/#defectos-deformaciones</code></p>
-		<p>Mayor&iacute;a de las personas hoy en d&iacute;a no distingue entre madera artificial (aglomerado + chapa) y madera maciza, lo cual causa unas expetaciones a la perfecci&oacute;n de la madera injustificadas. La madera de olivo est&aacute; llena de nudos y grietas que forman parte de su naturaleza - v&eacute;ase <a href="https://yevea.com/madera-olivo-venta.html#tableros-imperfecciones">imperfecciones de madera de olivo</a>. La madera es un elemento vivo sometido a cambios de temperatura y humedad ambientales, por lo que tender&aacute; a dilatarse y contraerse adapt&aacute;ndose a su entorno. Este movimiento de la madera puede producir a lo largo del tiempo grietas o deformaciones que no alteran su funcionalidad ni belleza natural. Cada cliente, antes de comprarnos un tablero o encimera debe ser consciente que la madera de olivo es profundamente imperfecta. La singularidad de la madera de olivo está en sus imperfecciones y su veta espectacular. La veta espectacular (heterogeneidad) excluye la perfección en sentido de los materiales industriales (homogeneidad). No se puede tener madera con la veta espectacular y madera perfecta sin grietas a la vez. Estos dos parámetros se excluyen mutuamente. No existe madera con veta sin grietas, especialmente en Yevea nos dedicamos a la producción de madera con mucha veta, grietas y nudos. En algunos productos tapamos las grietas con la resina. No se admiten reclamaciones por grietas y nudos destapados, ni tapados.</p>
+		<p>Mayoría de las personas hoy en día no distingue entre madera artificial (aglomerado + chapa) y madera maciza, lo cual causa unas expetaciones a la perfección de la madera injustificadas. La madera de olivo está llena de nudos y grietas que forman parte de su naturaleza - véase <a href="https://yevea.com/madera-olivo-venta.html#tableros-imperfecciones">imperfecciones de madera de olivo</a>. La madera es un elemento vivo sometido a cambios de temperatura y humedad ambientales, por lo que tenderá a dilatarse y contraerse adaptándose a su entorno. Este movimiento de la madera puede producir a lo largo del tiempo grietas o deformaciones que no alteran su funcionalidad ni belleza natural. Cada cliente, antes de comprarnos un tablero o encimera debe ser consciente que la madera de olivo es profundamente imperfecta. La singularidad de la madera de olivo está en sus imperfecciones y su veta espectacular. La veta espectacular (heterogeneidad) excluye la perfección en sentido de los materiales industriales (homogeneidad). No se puede tener madera con la veta espectacular y madera perfecta sin grietas a la vez. Estos dos parámetros se excluyen mutuamente. No existe madera con veta sin grietas, especialmente en Yevea nos dedicamos a la producción de madera con mucha veta, grietas y nudos. En algunos productos tapamos las grietas con la resina. No se admiten reclamaciones por grietas y nudos destapados, ni tapados.</p>
 		</li>
 
 	  <li><strong id="defectos-color">Color y veteado de madera de olivo</strong>
 		<p><code>yevea.com/#defectos-color</code></p>
 
-		<p>La madera de olivo maciza fabricamos a partir de los olivos procedentes da las renovaciones de los olivares en los cuales normalmente hay una mezcla de variedades diferentes con sus respectivas diferencias en color de madera. Las variedades entran a la serrer&iacute;a mezcladas y tal como salen, secamos los tablones. Durante de su secado se convierte toda madera de color gris oscura. Cuando fabricamos el tablero, es imposible seleccionar las tablas de olivo que tendr&aacute;n el mismo vetado y color. Las posibles variaciones de colores y veteado de la madera de olivo son innumerables. No se admiten reclamaciones por el color o veteado de la madera, tanto por exceso como por defecto ya que este aspecto es subjetivo.</p>
+		<p>La madera de olivo maciza fabricamos a partir de los olivos procedentes da las renovaciones de los olivares en los cuales normalmente hay una mezcla de variedades diferentes con sus respectivas diferencias en color de madera. Las variedades entran a la serrería mezcladas y tal como salen, secamos los tablones. Durante de su secado se convierte toda madera de color gris oscura. Cuando fabricamos el tablero, es imposible seleccionar las tablas de olivo que tendrán el mismo vetado y color. Las posibles variaciones de colores y veteado de la madera de olivo son innumerables. No se admiten reclamaciones por el color o veteado de la madera, tanto por exceso como por defecto ya que este aspecto es subjetivo.</p>
 		</li>
 		<li>
 		<strong id="defectos-fisuras">Fisuras en tableros</strong>
 
 		<p><code>yevea.com/#defectos-fisuras</code></p>
 
-		<p>Las fisuras (de las juntas) son bastante comunes en las tablas, tableros y encimeras de madera maciza, sobre todo de olivo. Su causa es movimiento o contracci&oacute;n de las tablas de madera por los cambios de la humedad del entorno. Los cambios de la humedad mueven las tablas porque la madera natural es un material higrosc&oacute;pico. Para limitar su movimiento se debe mantener el tablero bien saturado de aceite de mantenimiento. Si a&uacute;n as&iacute; las tablas se han movido, mandaremos al cliente el kit de reparaci&oacute;n, con el que se podr&aacute; reparar la junta facilmente. No se admitir&aacute;n cambios ni devoluciones por fisuras en los tableros derivadas de la falta de mantenimiento (tratamiento con aceite de madera).</p>
+		<p>Las fisuras (de las juntas) son bastante comunes en las tablas, tableros y encimeras de madera maciza, sobre todo de olivo. Su causa es movimiento o contracción de las tablas de madera por los cambios de la humedad del entorno. Los cambios de la humedad mueven las tablas porque la madera natural es un material higroscópico. Para limitar su movimiento se debe mantener el tablero bien saturado de aceite de mantenimiento. Si aún así las tablas se han movido, mandaremos al cliente el kit de reparación, con el que se podrá reparar la junta facilmente. No se admitirán cambios ni devoluciones por fisuras en los tableros derivadas de la falta de mantenimiento (tratamiento con aceite de madera).</p>
 		</li>
 		<li>
 		<strong id="defectos-curvamiento">Alambeos y curvamientos</strong>
 
 		<p><code>yevea.com/#defectos-curvamiento</code></p>
 
-		<p>Alambeos y curvamientos ocurren con frecuencia por inherencia de la madera de olivo. Para evitar los alambeos y curvamiento cliente debe atornillar el tablero a la estructura de soporte inmediatamente tras recibir el tablero, antes de que la madera se pueda mover. No se admitir&aacute;n cambios ni devoluciones por defectos en los tableros derivados de fallos de su almacenamiento, instalaci&oacute;n o montaje. Por ejemplo, si un tablero de madera maciza, no de fibra, no es atornillado a un soporte r&iacute;gido, este se alambear&aacute; y curvar&aacute; sin remedio. Esta es la respuesta natural de la madera a las diferencias de humedad entre la parte superior del tablero y su cara inferior. Esto es algo que cualquier profesional sabe con respecto a los tableros de madera natural.</p>
+		<p>Alambeos y curvamientos ocurren con frecuencia por inherencia de la madera de olivo. Para evitar los alambeos y curvamiento cliente debe atornillar el tablero a la estructura de soporte inmediatamente tras recibir el tablero, antes de que la madera se pueda mover. No se admitirán cambios ni devoluciones por defectos en los tableros derivados de fallos de su almacenamiento, instalación o montaje. Por ejemplo, si un tablero de madera maciza, no de fibra, no es atornillado a un soporte rígido, este se alambeará y curvará sin remedio. Esta es la respuesta natural de la madera a las diferencias de humedad entre la parte superior del tablero y su cara inferior. Esto es algo que cualquier profesional sabe con respecto a los tableros de madera natural.</p>
 		</li>
 
 		<li>
 		<strong id="defectos-instalacion">Instalación</strong>
 		<p><code>yevea.com/#defectos-instalacion</code></p>
-		<p>Dado que nuestra empresa env&iacute;a los tablones y tableros a los clientes, y en ning&uacute;n caso se hace cargo de su instalaci&oacute;n, no se hace responsable de los problemas derivados de esta.</p>
+		<p>Dado que nuestra empresa envía los tablones y tableros a los clientes, y en ningún caso se hace cargo de su instalación, no se hace responsable de los problemas derivados de esta.</p>
 		</li>
 		<li>
 		<strong id="defectos-desinstalacion">Desinstalación</strong>
@@ -291,12 +259,12 @@ a&ntilde;os<sup><a href="#garantia">&rarr; 4</a></sup></p>
 
 		<p><code>yevea.com/#defectos-acabado</code></p>
 
-		<p>El acabado de nuestros productos de madera de olivo es por defecto r&uacute;stico, sin ambici&oacute;n de llegar a la perfecci&oacute;n. Nuestro acabado es &quot;imperfecto&quot; por defecto. No se admiten reclamaciones de imperfecciones del acabado de la madera.</p>
+		<p>El acabado de nuestros productos de madera de olivo es por defecto rústico, sin ambición de llegar a la perfección. Nuestro acabado es "imperfecto" por defecto. No se admiten reclamaciones de imperfecciones del acabado de la madera.</p>
 		</li>
 		<li>
-		<strong id="defectos-fabricacion">Defectos en al fabricaci&oacute;n</strong>
+		<strong id="defectos-fabricacion">Defectos en al fabricación</strong>
 		<p><code>yevea.com/#defectos-fabricacion</code></p>
-		<p>&Uacute;nicamente se admitir&aacute;n reclamaciones por defectos en la fabricaci&oacute;n.</p>
+		<p>Únicamente se admitirán reclamaciones por defectos en la fabricación.</p>
 		</li>
 	</ol>
 	</li>
@@ -305,30 +273,30 @@ a&ntilde;os<sup><a href="#garantia">&rarr; 4</a></sup></p>
 
 	<p><code>yevea.com/#reembolso</code></p>
 
-	<p>En caso de cancelaci&oacute;n o devoluci&oacute;n, te reembolsamos tu dinero en un plazo de 5 d&iacute;as h&aacute;biles. Los gastos de la devoluci&oacute;n los asumimos nosotros.</p>
+	<p>En caso de cancelación o devolución, te reembolsamos tu dinero en un plazo de 5 días hábiles. Los gastos de la devolución los asumimos nosotros.</p>
 	</li>
 	<li>
-	<strong id="garantia">Garant&iacute;a</strong>
+	<strong id="garantia">Garantía</strong>
 
 	<p><code>yevea.com/#garantia</code></p>
 
-	<p>Confiamos en la calidad de nuestros productos de madera de olivo, as&iacute; que los clientes se pueden beneficiar de nuestra garant&iacute;a de <strong>5 a&ntilde;os</strong> que es m&aacute;s all&aacute; de lo habitual. La garant&iacute;a tan larga expresa nuestra certeza que nuestros productos durar&aacute;n la vida. La garant&iacute;a no cubre la madera cruda y los productos semi-acabados. Cualquier persona que realice un pedido declara haber le&iacute;do y seguido las <a href="#instrucciones">Instrucciones de Mantenimiento</a>. En caso de no seguimiento de las Instrucciones de Mantenimiento, la garant&iacute;a pierde el vigor.</p>
+	<p>Confiamos en la calidad de nuestros productos de madera de olivo, así que los clientes se pueden beneficiar de nuestra garantía de <strong>5 años</strong> que es más allá de lo habitual. La garantía tan larga expresa nuestra certeza que nuestros productos durarán la vida. La garantía no cubre la madera cruda y los productos semi-acabados. Cualquier persona que realice un pedido declara haber leído y seguido las <a href="#instrucciones">Instrucciones de Mantenimiento</a>. En caso de no seguimiento de las Instrucciones de Mantenimiento, la garantía pierde el vigor.</p>
 	</li>
 
 <li>
 	<strong id="privacidad">Privacidad</strong>
 	<p><code>yevea.com/#privacidad</code></p>
-	<p>Para formalizar el pedido y que pase a producci&oacute;n es imprescindible proporcionarnos los datos siguientes:</p>
+	<p>Para formalizar el pedido y que pase a producción es imprescindible proporcionarnos los datos siguientes:</p>
           <ol style="font-size:.8rem"  class="row">
     <li class="col-sm-6 col-md-4">Nombre del cliente
- <ol><li>Nombre (Nombre corto de la empresa o persona f&iacute;sica)</li>
-			<li>Raz&oacute;n social (Nombre oficial del cliente, para las facturas u otros documentos)</li>
-			<li>Tel&eacute;fono</li>
+ <ol><li>Nombre (Nombre corto de la empresa o persona física)</li>
+			<li>Razón social (Nombre oficial del cliente, para las facturas u otros documentos)</li>
+			<li>Teléfono</li>
 			<li>Email</li><br>
  </ol></li>
-<li class="col-sm-6 col-md-4">Forma jur&iacute;dica
+<li class="col-sm-6 col-md-4">Forma jurídica
 <ol>
-			<li>Persona f&iacute;sica (no una empresa)</li>
+			<li>Persona física (no una empresa)</li>
 			<li>Empresa</li>
 			<li>CIF/NIF</li><br>
  </ol></li>
@@ -341,22 +309,22 @@ a&ntilde;os<sup><a href="#garantia">&rarr; 4</a></sup></p>
     </li>
 <li class="col-sm-6 col-md-4">Justificante del pago
     <ol>
-		<li>Justificante de pago enviado por correo electr&oacute;nico martin@yevea.com</li>
+		<li>Justificante de pago enviado por correo electrónico martin@yevea.com</li>
         
 		<li>NO guardamos datos bancarios del cliente</li><br>
     </ol></li>
         <li class="col-sm-6 col-md-4">Productos pedidos
   <ol>
-			<li>N&ordm; de Presupuesto o Referencias de los productos</li>
-			<li>En caso de producci&oacute;n a medida el plano acotado en todas sus medidas</li> <br>
+			<li>Nº de Presupuesto o Referencias de los productos</li>
+			<li>En caso de producción a medida el plano acotado en todas sus medidas</li> <br>
     </ol>
      </li>
 		<li class="col-sm-6 col-md-4">Grupo de cliente (opcional)
 
             <ol>
-			<li>Producci&oacute;n de art&iacute;culos de uso</li>
-			<li>Producci&oacute;n de artesan&iacute;a</li>
-			<li>F&aacute;brica de mueble</li>
+			<li>Producción de artículos de uso</li>
+			<li>Producción de artesanía</li>
+			<li>Fábrica de mueble</li>
 			<li>Decorador/a</li>
 			<li>Constructora</li>
 			<li>Proyecto privado</li><br>
@@ -365,7 +333,7 @@ a&ntilde;os<sup><a href="#garantia">&rarr; 4</a></sup></p>
   </li>
               <br>
   </ol>
-	<p>Tus datos ser&aacute;n tratados con la m&aacute;xima confidencialidad, nunca los transferimos a terceros. En cualquier momento puedes exigir que te borremos de nuestra base de datos.</p>
+	<p>Tus datos serán tratados con la máxima confidencialidad, nunca los transferimos a terceros. En cualquier momento puedes exigir que te borremos de nuestra base de datos.</p>
 </li>
 
 	<li>
@@ -373,14 +341,14 @@ a&ntilde;os<sup><a href="#garantia">&rarr; 4</a></sup></p>
 
 	<p><code>yevea.com/#conformidad</code></p>
 
-	<p>Las presentes Condiciones de Venta constituyen el acuerdo total (Contrato) entre el Cliente y Yevea. Ning&uacute;n punto de las condiciones presentes limitar&aacute; tus derechos legales de consumidor. En el supuesto de que una de las cl&aacute;usulas de las presentes condiciones fuera nula de pleno derecho, esto no afectar&aacute; al resto de las condiciones. El cliente acepta exonerar a Yevea (y a sus funcionarios, ejecutivos, agentes, subsidiarios, empresas conjuntas, empleados y a terceras partes proveedoras de servicios), de toda responsabilidad por todos los reclamos, demandas y da&ntilde;os (reales y emergentes) de cualquier tipo e &iacute;ndole, conocidos y desconocidos, incluidos honorarios razonables de abogados, resultantes de un incumplimiento de sus declaraciones y garant&iacute;as arriba mencionados, o de infracci&oacute;n por su parte de cualquier ley o de la violaci&oacute;n de los derechos de terceros.</p>
+	<p>Las presentes Condiciones de Venta constituyen el acuerdo total (Contrato) entre el Cliente y Yevea. Ningún punto de las condiciones presentes limitará tus derechos legales de consumidor. En el supuesto de que una de las cláusulas de las presentes condiciones fuera nula de pleno derecho, esto no afectará al resto de las condiciones. El cliente acepta exonerar a Yevea (y a sus funcionarios, ejecutivos, agentes, subsidiarios, empresas conjuntas, empleados y a terceras partes proveedoras de servicios), de toda responsabilidad por todos los reclamos, demandas y daños (reales y emergentes) de cualquier tipo e índole, conocidos y desconocidos, incluidos honorarios razonables de abogados, resultantes de un incumplimiento de sus declaraciones y garantías arriba mencionados, o de infracción por su parte de cualquier ley o de la violación de los derechos de terceros.</p>
 	</li>
 	<li>
 	<strong id="ley">Ley aplicable</strong>
 
 	<p><code>yevea.com/#ley</code></p>
 
-	<p>Estas Condiciones de Venta se regir&aacute;n por la legislaci&oacute;n espa&ntilde;ola vigente. Para la resoluci&oacute;n de cualquier duda, discrepancia o divergencia que pudiera suscitarse en el cumplimiento e interpretaci&oacute;n del presente Contrato, las partes se someten a los Juzgados y Tribunales del domicilio del vendedor.</p>
+	<p>Estas Condiciones de Venta se regirán por la legislación española vigente. Para la resolución de cualquier duda, discrepancia o divergencia que pudiera suscitarse en el cumplimiento e interpretación del presente Contrato, las partes se someten a los Juzgados y Tribunales del domicilio del vendedor.</p>
 	</li>
 </ol>
 
@@ -390,60 +358,8 @@ a&ntilde;os<sup><a href="#garantia">&rarr; 4</a></sup></p>
 
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════
-     FOOTER — identical on every page, only text changes per lang
-     ═══════════════════════════════════════════════════════════ -->
-<footer id="woodstore-footer">
-    <div class="container">
-        <div class="row g-4">
-            <!-- Contact channels -->
-            <div class="col-12 col-md-4">
-                <h6 class="footer-heading">Contacto</h6>
-                <ul class="footer-list">
-                    <li>
-                        <i class="fa-solid fa-phone"></i>
-                        <a href="tel:+34900000000">+34 900 000 000</a>
-                    </li>
-                    <li>
-                        <i class="fa-brands fa-whatsapp"></i>
-                        <a href="https://wa.me/34600000000" target="_blank" rel="noopener">+34 600 000 000</a>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-envelope"></i>
-                        <a href="mailto:info@example.com">info@example.com</a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Address -->
-            <div class="col-12 col-md-4">
-                <h6 class="footer-heading">Nuestra Dirección</h6>
-                <address class="footer-address">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Calle Ejemplo 123<br>
-                    00000 Ciudad, Provincia<br>
-                    España
-                </address>
-            </div>
-
-            <!-- Quick links -->
-            <div class="col-12 col-md-4">
-                <h6 class="footer-heading">Enlaces Rápidos</h6>
-                <ul class="footer-list">
-                    <li><a href="/es/about.html">Sobre Nosotros</a></li>
-                    <li><a href="/es/faq.html">Preguntas Frecuentes</a></li>
-                    <li><a href="/es/contact.html">Contacto</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <hr class="footer-divider">
-
-        <div class="text-center small footer-copy">
-            &copy; 2025 Yevea. Todos los derechos reservados.
-        </div>
-    </div>
-</footer>
+<!-- Footer loaded dynamically from footer.html -->
+<div id="footer-placeholder"></div>
 
 <!-- Bootstrap JS (CDN) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

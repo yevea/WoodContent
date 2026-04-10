@@ -104,6 +104,19 @@ body {
     padding-top: 50px;
 }
 
+/*nested counter list*/
+ol.index {counter-reset: item;}
+ol.index li {display: block;}
+ol.index li::before {content: counters(item, ".") ". ";counter-increment: item;}
+ol.index ol {counter-reset: item;}
+ol.index ol > li {display: block;}
+ol.index ol > li::before {content: counters(item, ".") " ";counter-increment: item;}
+ol.index > li {padding-top: .125rem;}
+ol.index > li > ol {padding-left: 0.5rem ;}
+ol.index > li > ol > li > ol {padding-left: 0.5rem ;}
+header.yevea ol.index li a {font-weight:400;}
+sup.index {padding:.25em .375em .25em .5em;border-radius:8px;font-size:.5em;}
+
 /* ── Links ──────────────────────────────────────────────────── */
 a {
     color: #495057;

@@ -49,7 +49,7 @@
         xhr.open('GET', url, true);
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
+                if (xhr.status === 200 || (xhr.status === 0 && xhr.responseText)) {
                     el.innerHTML = xhr.responseText; // safe: same-origin trusted HTML
                     if (callback) callback();
                 } else {
@@ -103,9 +103,9 @@
         }
     }
 
-    // Load header and footer fragments
-    loadFragment('/' + currentLang + '/header.html', 'header-placeholder', initHeader);
-    loadFragment('/' + currentLang + '/footer.html', 'footer-placeholder');
+    // Load header and footer fragments (relative paths — works from any base URL)
+    loadFragment('header.html', 'header-placeholder', initHeader);
+    loadFragment('footer.html', 'footer-placeholder');
 
     // ── Cookie sync ────────────────────────────────────────────
     var localeMap = { es: 'es_ES', en: 'en_EN', fr: 'fr_FR', de: 'de_DE' };

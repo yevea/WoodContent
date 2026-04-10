@@ -70,6 +70,7 @@
     width: 240px;
     box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.3);
     z-index: 1029;
+    background-color: #000;
 }
 .hamburger-dropdown.show {
     display: block;

@@ -68,7 +68,6 @@
     top: 50px;
     right: 0;
     width: 240px;
-    background-color: #212529;
     box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.3);
     z-index: 1029;
 }
@@ -89,7 +88,6 @@
     transition: background-color 0.15s;
 }
 .hamburger-dropdown li a:hover {
-    background-color: #000;
     color: #fff;
 }
 .hamburger-divider {

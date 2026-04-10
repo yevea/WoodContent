@@ -13,9 +13,11 @@
     'use strict';
 
     // ── Helpers ────────────────────────────────────────────────
+    var supportedLangs = ['es', 'en', 'fr', 'de'];
     var pathParts = window.location.pathname.split('/');
-    var currentLang = pathParts[1] || 'es';                  // "es", "en", …
-    var currentPage = pathParts[2] || 'faq.html';            // "faq.html", …
+    var rawLang = pathParts[1] || 'es';
+    var currentLang = supportedLangs.indexOf(rawLang) !== -1 ? rawLang : 'es';
+    var currentPage = pathParts[2] || 'faq.html';
 
     // Pages whose filename differs between languages.
     // Any page NOT listed here keeps its filename across all languages.
@@ -35,15 +37,25 @@
     }
 
     // ── Include loader ─────────────────────────────────────────
+    /**
+     * Fetch an HTML fragment from the same origin and inject it into a
+     * placeholder element.  Only same-origin, whitelisted paths are loaded;
+     * the content is trusted first-party HTML (our own header/footer files).
+     */
     function loadFragment(url, placeholderId, callback) {
         var el = document.getElementById(placeholderId);
         if (!el) return;
         var xhr = new XMLHttpRequest();
         xhr.open('GET', url, true);
         xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                el.innerHTML = xhr.responseText;
-                if (callback) callback();
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    el.innerHTML = xhr.responseText; // safe: same-origin trusted HTML
+                    if (callback) callback();
+                } else {
+                    // eslint-disable-next-line no-console
+                    console.error('WoodPages: failed to load ' + url + ' (HTTP ' + xhr.status + ')');
+                }
             }
         };
         xhr.send();
@@ -55,7 +67,9 @@
         var links = document.querySelectorAll('#woodstore-header [data-lang]');
         for (var i = 0; i < links.length; i++) {
             var lang = links[i].getAttribute('data-lang');
-            links[i].setAttribute('href', '/' + lang + '/' + pageForLang(lang));
+            if (supportedLangs.indexOf(lang) !== -1) {
+                links[i].setAttribute('href', '/' + lang + '/' + pageForLang(lang));
+            }
         }
 
         // ── Hamburger menu toggle ──────────────────────────────

@@ -34,9 +34,17 @@
     // Pages whose filename differs between languages.
     // Any page NOT listed here keeps its filename across all languages.
     var pageEquivalents = {
-        'condiciones.html': { es: 'condiciones.html', en: 'conditions.html', fr: 'conditions.html', de: 'agbs.html' },
-        'conditions.html':  { es: 'condiciones.html', en: 'conditions.html', fr: 'conditions.html', de: 'agbs.html' },
-        'agbs.html':        { es: 'condiciones.html', en: 'conditions.html', fr: 'conditions.html', de: 'agbs.html' }
+        // Contact pages
+        'contactanos.html':  { es: 'contactanos.html', en: 'contact-us.html', fr: 'contact.html', de: 'contact.html' },
+        'contact-us.html':   { es: 'contactanos.html', en: 'contact-us.html', fr: 'contact.html', de: 'contact.html' },
+        'contact.html':      { es: 'contactanos.html', en: 'contact-us.html', fr: 'contact.html', de: 'contact.html' },
+        // Terms / Conditions pages
+        'condiciones-de-venta.html': { es: 'condiciones-de-venta.html', en: 'terms-of-sale.html', de: 'agbs.html' },
+        'terms-of-sale.html':        { es: 'condiciones-de-venta.html', en: 'terms-of-sale.html', de: 'agbs.html' },
+        'agbs.html':                 { es: 'condiciones-de-venta.html', en: 'terms-of-sale.html', de: 'agbs.html' },
+        // Instructions pages
+        'instrucciones-de-uso.html':  { es: 'instrucciones-de-uso.html', en: 'instructions-for-use.html' },
+        'instructions-for-use.html':  { es: 'instrucciones-de-uso.html', en: 'instructions-for-use.html' }
     };
 
     /** Return the correct page filename for a given target language. */

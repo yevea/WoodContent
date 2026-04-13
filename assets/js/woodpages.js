@@ -31,6 +31,9 @@
         ? pathParts[langIndex + 1]
         : 'faq.html';
 
+    // Base path where this site is deployed (no trailing slash).
+    var basePath = '/info';
+
     // Pages whose filename differs between languages.
     // Any page NOT listed here keeps its filename across all languages.
     var pageEquivalents = {
@@ -88,7 +91,7 @@
         for (var i = 0; i < links.length; i++) {
             var lang = links[i].getAttribute('data-lang');
             if (supportedLangs.indexOf(lang) !== -1) {
-                links[i].setAttribute('href', '../' + lang + '/' + pageForLang(lang));
+                links[i].setAttribute('href', basePath + '/' + lang + '/' + pageForLang(lang));
             }
         }
 
@@ -123,9 +126,10 @@
         }
     }
 
-    // Load header and footer fragments (relative paths — works from any base URL)
-    loadFragment('header.html', 'header-placeholder', initHeader);
-    loadFragment('footer.html', 'footer-placeholder');
+    // Load header and footer fragments (absolute paths — works from any page depth)
+    var fragmentDir = basePath + '/' + currentLang + '/';
+    loadFragment(fragmentDir + 'header.html', 'header-placeholder', initHeader);
+    loadFragment(fragmentDir + 'footer.html', 'footer-placeholder');
 
     // ── Cookie sync ────────────────────────────────────────────
     var localeMap = { es: 'es_ES', en: 'en_EN', fr: 'fr_FR', de: 'de_DE' };

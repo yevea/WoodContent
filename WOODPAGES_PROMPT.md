@@ -35,20 +35,28 @@ WoodPages/
 │   ├── css/
 │   │   └── woodpages.css       ← full grey theme (Section 7)
 │   └── js/
-│       └── woodpages.js        ← shared JS: hamburger, lang-switcher, cookie (Section 6)
+│       └── woodpages.js        ← shared JS: header/footer loader, hamburger, lang-switcher, cookie (Section 6)
 ├── es/
+│   ├── header.html             ← Spanish header fragment (loaded by JS)
+│   ├── footer.html             ← Spanish footer fragment (loaded by JS)
 │   ├── faq.html                ← Spanish FAQ page
 │   ├── about.html              ← Spanish About Us page
 │   └── contact.html            ← Spanish Contact page
 ├── en/
+│   ├── header.html             ← English header fragment
+│   ├── footer.html             ← English footer fragment
 │   ├── faq.html                ← English FAQ page
 │   ├── about.html              ← English About Us page
 │   └── contact.html            ← English Contact page
 ├── fr/
+│   ├── header.html             ← French header fragment
+│   ├── footer.html             ← French footer fragment
 │   ├── faq.html                ← French FAQ page
 │   ├── about.html              ← French About Us page
 │   └── contact.html            ← French Contact page
 ├── de/
+│   ├── header.html             ← German header fragment
+│   ├── footer.html             ← German footer fragment
 │   ├── faq.html                ← German FAQ page
 │   ├── about.html              ← German About Us page
 │   └── contact.html            ← German Contact page
@@ -101,6 +109,11 @@ The root `index.html` detects the language and redirects to `/{lang}/faq.html`
 Every HTML page follows this exact skeleton. The agent must create one copy per
 language per page, with only the **language-specific strings** changed.
 
+Header and footer are loaded dynamically at runtime from centralised fragment
+files (`{lang}/header.html` and `{lang}/footer.html`) by `woodpages.js`.
+This means you edit the header/footer in **one place** per language, and every
+page picks up the change automatically.
+
 ### 4.1  Full Example — `es/faq.html`
 
 ```html
@@ -111,12 +124,12 @@ language per page, with only the **language-specific strings** changed.
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Preguntas Frecuentes — Yevea</title>
 
-    <!-- hreflang SEO tags -->
-    <link rel="alternate" hreflang="es" href="/es/faq.html">
-    <link rel="alternate" hreflang="en" href="/en/faq.html">
-    <link rel="alternate" hreflang="fr" href="/fr/faq.html">
-    <link rel="alternate" hreflang="de" href="/de/faq.html">
-    <link rel="alternate" hreflang="x-default" href="/es/faq.html">
+    <!-- hreflang SEO tags (always use absolute /info/… paths) -->
+    <link rel="alternate" hreflang="es" href="/info/es/faq.html">
+    <link rel="alternate" hreflang="en" href="/info/en/faq.html">
+    <link rel="alternate" hreflang="fr" href="/info/fr/faq.html">
+    <link rel="alternate" hreflang="de" href="/info/de/faq.html">
+    <link rel="alternate" hreflang="x-default" href="/info/es/faq.html">
 
     <!-- Bootstrap 5 CSS (CDN) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -125,44 +138,12 @@ language per page, with only the **language-specific strings** changed.
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
           rel="stylesheet" crossorigin="anonymous">
     <!-- WoodPages grey theme -->
-    <link href="/assets/css/woodpages.css" rel="stylesheet">
+    <link href="/info/assets/css/woodpages.css" rel="stylesheet">
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════════════════════
-     HEADER — identical on every page, only lang label changes
-     ═══════════════════════════════════════════════════════════ -->
-<header id="woodstore-header">
-    <div class="container d-flex align-items-center justify-content-between">
-        <a href="/"><img style="width:100px;height:25px;"
-            src="https://yevea.com/001-vectores/logo-yevea-white.svg"
-            alt="madera olivo - logo"><sup>®</sup></a>
-        <div class="d-flex align-items-center gap-2">
-            <!-- Language switcher dropdown -->
-            <div class="dropdown">
-                <button class="btn btn-sm dropdown-toggle lang-switcher-btn" type="button"
-                        id="lang-switcher" data-bs-toggle="dropdown" aria-expanded="false">
-                    español
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="lang-switcher">
-                    <li><a class="dropdown-item active" href="/es/faq.html">español</a></li>
-                    <li><a class="dropdown-item" href="/en/faq.html">English</a></li>
-                    <li><a class="dropdown-item" href="/fr/faq.html">français</a></li>
-                    <li><a class="dropdown-item" href="/de/faq.html">Deutsch</a></li>
-                </ul>
-            </div>
-            <button type="button" id="hamburger-toggle" class="hamburger-toggle"
-                    aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
-        </div>
-    </div>
-    <div id="hamburger-menu" class="hamburger-dropdown">
-        <ul>
-            <li><a href="/es/about.html">Sobre Nosotros</a></li>
-            <li><a href="/es/faq.html">Preguntas Frecuentes</a></li>
-            <li><a href="/es/contact.html">Contacto</a></li>
-        </ul>
-    </div>
-</header>
+<!-- Header loaded dynamically from header.html -->
+<div id="header-placeholder"></div>
 
 <!-- ═══════════════════════════════════════════════════════════
      PAGE CONTENT — owner edits this section by hand
@@ -172,66 +153,14 @@ language per page, with only the **language-specific strings** changed.
     <!-- YOUR CONTENT HERE -->
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════
-     FOOTER — identical on every page, only text changes per lang
-     ═══════════════════════════════════════════════════════════ -->
-<footer id="woodstore-footer">
-    <div class="container">
-        <div class="row g-4">
-            <!-- Contact channels -->
-            <div class="col-12 col-md-4">
-                <h6 class="footer-heading">Contacto</h6>
-                <ul class="footer-list">
-                    <li>
-                        <i class="fa-solid fa-phone"></i>
-                        <a href="tel:+34900000000">+34 900 000 000</a>
-                    </li>
-                    <li>
-                        <i class="fa-brands fa-whatsapp"></i>
-                        <a href="https://wa.me/34600000000" target="_blank" rel="noopener">+34 600 000 000</a>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-envelope"></i>
-                        <a href="mailto:info@example.com">info@example.com</a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Address -->
-            <div class="col-12 col-md-4">
-                <h6 class="footer-heading">Nuestra Dirección</h6>
-                <address class="footer-address">
-                    <i class="fa-solid fa-location-dot"></i>
-                    Calle Ejemplo 123<br>
-                    00000 Ciudad, Provincia<br>
-                    España
-                </address>
-            </div>
-
-            <!-- Quick links -->
-            <div class="col-12 col-md-4">
-                <h6 class="footer-heading">Enlaces Rápidos</h6>
-                <ul class="footer-list">
-                    <li><a href="/es/about.html">Sobre Nosotros</a></li>
-                    <li><a href="/es/faq.html">Preguntas Frecuentes</a></li>
-                    <li><a href="/es/contact.html">Contacto</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <hr class="footer-divider">
-
-        <div class="text-center small footer-copy">
-            &copy; 2025 Yevea. Todos los derechos reservados.
-        </div>
-    </div>
-</footer>
+<!-- Footer loaded dynamically from footer.html -->
+<div id="footer-placeholder"></div>
 
 <!-- Bootstrap JS (CDN) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
 <!-- WoodPages shared JS -->
-<script src="/assets/js/woodpages.js"></script>
+<script src="/info/assets/js/woodpages.js"></script>
 </body>
 </html>
 ```
@@ -245,16 +174,12 @@ When creating the same page for another language (e.g. `en/faq.html`), change
 |---|---|---|
 | `<html lang="…">` | `es` | `en` |
 | `<title>` | `Preguntas Frecuentes — Yevea` | `FAQ — Yevea` |
-| Lang-switcher button text | `español` | `English` |
-| Lang-switcher `active` class | on `español` link | on `English` link |
-| Lang-switcher `href` values | `/es/faq.html` etc. | `/en/faq.html` etc. |
-| Hamburger menu link `href` | `/es/about.html` etc. | `/en/about.html` etc. |
-| Hamburger menu link **text** | Spanish labels | English labels |
+| hreflang `href` values | `/info/es/faq.html` etc. | `/info/en/faq.html` etc. |
 | `<h1>` | `Preguntas Frecuentes` | `FAQ` |
-| Footer heading text | Spanish | English |
-| Footer quick-link `href` | `/es/…` | `/en/…` |
-| Footer quick-link **text** | Spanish labels | English labels |
-| Footer copyright text | Spanish | English |
+
+The header and footer are loaded dynamically by `woodpages.js` from the
+centralised `{lang}/header.html` and `{lang}/footer.html` fragment files.
+You do **not** put header or footer HTML into content pages.
 
 All other HTML (structure, CSS classes, IDs, scripts) remains **identical**.
 

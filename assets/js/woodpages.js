@@ -113,6 +113,17 @@
             });
         }
 
+        // Close hamburger menu when clicking outside
+        if (hamburgerToggle && hamburgerMenu) {
+            document.addEventListener('click', function (e) {
+                if (!hamburgerMenu.classList.contains('show')) return;
+                if (hamburgerToggle.contains(e.target) || hamburgerMenu.contains(e.target)) return;
+                hamburgerToggle.classList.remove('open');
+                hamburgerMenu.classList.remove('show');
+                hamburgerToggle.setAttribute('aria-expanded', 'false');
+            });
+        }
+
         // When the language dropdown opens, close the hamburger menu
         var langSwitcher = document.getElementById('lang-switcher');
         if (langSwitcher) {

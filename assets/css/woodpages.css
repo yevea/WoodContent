@@ -120,6 +120,23 @@
     margin: 0.25rem 1rem;
 }
 
+/* header */
+
+header.yevea {
+  padding-bottom:.5rem;
+  background-color:#000;
+  color:#eee;
+}
+
+header.yevea a {
+  color:#fff;
+}
+
+header.yevea h1 {
+  color:#eee;
+  font-weight:900;
+  font-size:3rem;
+}
 /* ── Base ───────────────────────────────────────────────────── */
 body {
     background-color: #f8f9fa;

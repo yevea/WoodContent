@@ -133,8 +133,9 @@ header.yevea a {
 }
 
 header.yevea h1 {
-  font-weight:900;
-  font-size:3rem;
+font-size: 3rem;
+    font-family: 'FontAwesome';
+    letter-spacing: .5rem;
 }
 
 /* ── Base ───────────────────────────────────────────────────── */

@@ -133,10 +133,10 @@ header.yevea a {
 }
 
 header.yevea h1 {
-  color:#eee;
   font-weight:900;
   font-size:3rem;
 }
+
 /* ── Base ───────────────────────────────────────────────────── */
 body {
     padding-top: 50px;

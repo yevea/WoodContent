@@ -22,9 +22,6 @@
     width: 100%;
     padding: 0 1rem;
 }
-#woodstore-header a {
-    text-decoration: none;
-}
 #woodstore-header a:hover {
     color: #adb5bd;
 }
@@ -108,7 +105,6 @@
     display: block;
     padding: 0.6rem 1.25rem;
     color: #dee2e6;
-    text-decoration: none;
     font-size: 0.95rem;
     transition: background-color 0.15s;
 }
@@ -141,8 +137,9 @@ font-size: 3rem;
 /* ── Base ───────────────────────────────────────────────────── */
 body {
     padding-top: 50px;
+    
 }
-
+ 
 /*nested counter list*/
 ol.index {counter-reset: item;}
 ol.index li {display: block;}
@@ -158,8 +155,10 @@ header ol.index li a {font-weight:400;}
 sup.index {padding:.25em .375em .25em .5em;border-radius:8px;font-size:.5em;}
 
 /* ── Links ──────────────────────────────────────────────────── */
+
 a {
     color: #495057;
+    text-decoration: none;    
 }
 a:hover {
     color: #212529;
@@ -173,13 +172,12 @@ a:hover {
 }
 #woodstore-footer a {
     color: #dee2e6;
-    text-decoration: none;
 }
 #woodstore-footer a:hover {
     color: #fff;
 }
 .footer-heading {
-    color: #fff;
+    color: #dee2e6;
     letter-spacing: 0.05em;
     margin-bottom: 0.75rem;
     font-size: 0.85rem;

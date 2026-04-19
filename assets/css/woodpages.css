@@ -110,9 +110,6 @@
 }
 
 .hamburger-dropdown li i {
-    width: 1.25rem;
-    text-align: center;
-    margin-right: 0.4rem;
     color: #1c9cff;
 }
 
@@ -146,9 +143,14 @@ font-size: 3rem;
 /* ── Base ───────────────────────────────────────────────────── */
 body {
     padding-top: 50px;
-    
 }
- 
+
+i {
+    width: 1.25rem;
+    text-align: center;
+    margin-right: 0.4rem;
+}
+
 /*nested counter list*/
 ol.index {counter-reset: item;}
 ol.index li {display: block;}
@@ -201,9 +203,6 @@ a:hover {
     font-size: 0.9rem;
 }
 .footer-list li i {
-    width: 1.25rem;
-    text-align: center;
-    margin-right: 0.4rem;
     color: #1c9cff;
 }
 .footer-address {
@@ -213,7 +212,6 @@ a:hover {
 }
 .footer-address i {
     color: #adb5bd;
-    margin-right: 0.4rem;
 }
 .footer-divider {
     border-color: #495057;

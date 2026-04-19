@@ -23,7 +23,7 @@
     padding: 0 1rem;
 }
 #woodstore-header a:hover {
-    color: #adb5bd;
+    color: #fff;
 }
 
 /* ── Hamburger toggle button ────────────────────────────────── */
@@ -116,8 +116,8 @@
     color: #1c9cff;
 }
 
-.hamburger-dropdown li a:hover,  {
-.hamburger-dropdown li i:hover,  {
+.hamburger-dropdown li a:hover,
+.hamburger-dropdown li i:hover  {
     color: #fff;
 }
 

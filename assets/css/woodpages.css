@@ -115,9 +115,12 @@
     margin-right: 0.4rem;
     color: #1c9cff;
 }
-.hamburger-dropdown li a:hover {
+
+.hamburger-dropdown li a:hover,  {
+.hamburger-dropdown li i:hover,  {
     color: #fff;
 }
+
 .hamburger-divider {
     border-color: #495057;
     margin: 0.25rem 1rem;

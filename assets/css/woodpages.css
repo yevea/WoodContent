@@ -116,8 +116,7 @@
     color: #1c9cff;
 }
 
-.hamburger-dropdown li a:hover,
-.hamburger-dropdown li i:hover  {
+.hamburger-dropdown li a:hover {
     color: #fff;
 }
 

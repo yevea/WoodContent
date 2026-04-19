@@ -108,6 +108,13 @@
     font-size: 0.95rem;
     transition: background-color 0.15s;
 }
+
+.hamburger-dropdown li i {
+    width: 1.25rem;
+    text-align: center;
+    margin-right: 0.4rem;
+    color: #1c9cff;
+}
 .hamburger-dropdown li a:hover {
     color: #fff;
 }

@@ -23,14 +23,14 @@
     padding: 0 1rem;
 }
 #woodstore-header a:hover {
-    color: #fff;
+    color: #f8f9fa;
 }
 
 /* ── Hamburger toggle button ────────────────────────────────── */
 .hamburger-toggle {
     background: none;
     border: none;
-    color: #fff;
+    color: #f8f9fa;
     font-size: 1.3rem;
     cursor: pointer;
     padding: 0.25rem 0.5rem;
@@ -50,7 +50,7 @@
     letter-spacing: 0.05em;
 }
 .lang-switcher-btn:focus {
-    color: #fff;
+    color: #f8f9fa;
 }
 .lang-switcher-btn a {
     color: #e9ecef;
@@ -73,12 +73,12 @@
 }
 #woodstore-header .dropdown-menu .dropdown-item:hover,
 #woodstore-header .dropdown-menu .dropdown-item:focus {
-    color: #fff;
+    color: #f8f9fa;
     background-color: transparent;
 }
 #woodstore-header .dropdown-menu .dropdown-item.active,
 #woodstore-header .dropdown-menu .dropdown-item:active {
-    color: #fff;
+    color: #f8f9fa;
     background-color: transparent;
 }
 
@@ -110,7 +110,7 @@
 }
 
 .hamburger-dropdown li a:hover {
-    color: #fff;
+    color: #f8f9fa;
 }
 
 .hamburger-divider {
@@ -123,7 +123,7 @@
 header.yevea {
   padding-bottom:.5rem;
   background-color:#000;
-  color:#eee;
+  color:#e9ecef;
 }
 
 header.yevea a {

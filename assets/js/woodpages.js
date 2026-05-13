@@ -32,7 +32,7 @@
         : 'faq.html';
 
     // Base path where this site is deployed (no trailing slash).
-    var basePath = '/info';
+    var basePath = '/';
 
     // Pages whose filename differs between languages.
     // Any page NOT listed here keeps its filename across all languages.

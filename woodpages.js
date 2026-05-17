@@ -138,7 +138,7 @@
     }
 
     // Load header and footer fragments (absolute paths — works from any page depth)
-    var fragmentDir = basePath + '/' + currentLang + '/';
+    var fragmentDir = basePath;
     loadFragment(fragmentDir + 'header.html', 'header-placeholder', initHeader);
     loadFragment(fragmentDir + 'footer.html', 'footer-placeholder');
 

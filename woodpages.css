@@ -17,6 +17,12 @@
     z-index: 1030;
     display: flex;
     align-items: center;
+    padding: 0 1rem;
+}
+#woodstore-header .container {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
 }
 #woodstore-header .woodstore-header-inner {
     width: 100%;

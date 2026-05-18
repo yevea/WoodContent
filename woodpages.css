@@ -138,8 +138,12 @@ header.yevea a {
 }
 
 header.yevea h1 {
+    color:#fff;
     font-size: 3rem;
     letter-spacing: .125rem;
+}
+header.yevea btn {
+    text-decoration: none;
 }
 
 /* ── Base ───────────────────────────────────────────────────── */

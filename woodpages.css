@@ -133,7 +133,8 @@ header.yevea {
 }
 
 header.yevea a {
-  color:#fff;
+    color:#fff;
+    text-decoration: underline;
 }
 
 header.yevea h1 {

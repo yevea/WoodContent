@@ -32,7 +32,8 @@
         : 'faq.html';
 
     // Base path where this site is deployed (no trailing slash).
-    var basePath = '/';
+    // For /es/ deployment, basePath should be /es
+    var basePath = '/' + currentLang;
 
     // Pages whose filename differs between languages.
     // Any page NOT listed here keeps its filename across all languages.
@@ -91,7 +92,7 @@
         for (var i = 0; i < links.length; i++) {
             var lang = links[i].getAttribute('data-lang');
             if (supportedLangs.indexOf(lang) !== -1) {
-                links[i].setAttribute('href', basePath + '/' + lang + '/' + pageForLang(lang));
+                links[i].setAttribute('href', '/' + lang + '/' + pageForLang(lang));
             }
         }
 
@@ -137,8 +138,8 @@
         }
     }
 
-    // Load header and footer fragments (absolute paths — works from any page depth)
-    var fragmentDir = basePath;
+    // Load header and footer fragments from current language directory
+    var fragmentDir = basePath + '/';
     loadFragment(fragmentDir + 'header.html', 'header-placeholder', initHeader);
     loadFragment(fragmentDir + 'footer.html', 'footer-placeholder');
 
